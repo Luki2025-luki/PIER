@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund:wght@100..400&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Primera Iglesia Evangélica De Riohacha</h1>
+    <p>PIER</p>
+
+    <div class="carrusel" id="carrusel">
+        <a class="item activo" href="historia.html">Historia</a>
+        <a class="item" href="horarios.html">Horarios</a>
+    </div>
+
+    <p>Queridos hermanos y hermanas, es un honor para mí estar aquí y compartir con ustedes un breve recuento histórico de nuestra amada congregación.</p>
+    <p>El hermano Josué Alcalá, con su profundo compromiso y dedicación, ha legado a nuestra congregación un valioso recuento histórico que abarca el viaje de fé y esfuerzo desde nuestros inicios en 1937. Su relato nos invita a recordar y a valorar el desarrollo de esta obra del Señor en nuestra región. Al compartir su conocimiento, nos ayuda a mantener viva la memoria de aquellos que nos precedieron, quienes, guiados por Dios, sembraron las semillas del evangelio en corazones y comunidades. Con el fin de fortalecer nuestra fé es esencial que las nuevas generaciones conozcan esta historia, que es parte fundamental en nuestra vida espiritual.</p>
+
+    <script>
+        const carrusel = document.getElementById('carrusel');
+        const items = carrusel.querySelectorAll('.item');
+        let index = 0;
+
+        function mostrarSiguiente() {
+            items[index].classList.remove('activo');
+            index = (index + 1) % items.length; // Avanza al siguiente elemento
+            items[index].classList.add('activo');
+        }
+
+        setInterval(mostrarSiguiente, 3000); // Cambia cada 3 segundos
+
+        carrusel.addEventListener('mousemove', (e) => {
+            const x = e.clientX - carrusel.getBoundingClientRect().left;
+            const y = e.clientY - carrusel.getBoundingClientRect().top;
+            crearEstrella(x, y);
+        });
+
+        function crearEstrella(x, y) {
+            const estrella = document.createElement('div');
+            estrella.classList.add('estrella');
+            estrella.style.left = `${x}px`;
+            estrella.style.top = `${y}px`;
+            estrella.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            carrusel.appendChild(estrella);
+
+            setTimeout(() => {
+                estrella.remove();
+            }, 1000); // 1000 ms = 1 segundo
+        }
+
+        carrusel.addEventListener('mouseleave', () => {
+            carrusel.style.transform = `translateX(0)`; // Regresa a la posición original
+        });
+    </script>
+</body>
+</html>
