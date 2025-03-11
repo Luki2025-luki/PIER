@@ -63,16 +63,16 @@ body {
 }
 
 #mi-video {
-    position: absolute; /* Cambiado a absolute para el contenedor */
-    top: 50%;
-    left: 50%;
-    min-width: 100%; /* Asegúrate de que el video cubra todo el ancho */
-    min-height: 100%; /* Asegúrate de que el video cubra toda la altura */
-    width: auto;
-    height: auto;
-    opacity: 0.6; /* Ajusta la transparencia aquí */
-    transform: translate(-50%, -50%); /* Centra el video */
+    position: fixed; /* Mantiene el video fijo como fondo */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ocupa el 100% del ancho de la ventana */
+    height: 100vh; /* Ocupa el 100% del alto de la ventana */
+    object-fit: cover; /* Hace que el video cubra todo el fondo sin distorsionarse */
+    z-index: -1; /* Asegura que el video esté detrás del contenido */
+    opacity: 0.6; /* Ajusta la transparencia del video */
 }
+
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 600px) {
