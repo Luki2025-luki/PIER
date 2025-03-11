@@ -3,7 +3,7 @@ body {
     text-align: center;
     padding-top: 40px;
     margin: 0; /* Elimina el margen por defecto */
-    background-image: url(fondo.png.webp);
+    background-image: url(fondo1.png);
     background-size: cover;
     background-position: center; /* Mejor visualización */
     background-repeat: no-repeat;
