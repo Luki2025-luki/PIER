@@ -18,6 +18,22 @@ body {
     object-fit: cover; /* Esto ayudará a mantener la relación de aspecto */
 }
 
+.btn-regresar {
+    display: inline-block;
+    background-color: #007BFF; /* Color azul */
+    color: white; /* Texto en blanco */
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-regresar:hover {
+    background-color: #0056b3; /* Color azul más oscuro al pasar el mouse */
+}
+
+
 h1 {
     color: black;
     font-size: 50px; /* Tamaño del título */

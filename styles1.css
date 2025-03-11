@@ -11,6 +11,22 @@ body {
     position: relative; /* Necesario para el posicionamiento absoluto del video */
 }
 
+.btn-regresar {
+    display: inline-block;
+    background-color: #007BFF; /* Color azul */
+    color: white; /* Texto en blanco */
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-regresar:hover {
+    background-color: #0056b3; /* Color azul más oscuro al pasar el mouse */
+}
+
+
 .video-container {
     position: fixed; /* Fija el contenedor del video a la ventana */
     top: 0;
