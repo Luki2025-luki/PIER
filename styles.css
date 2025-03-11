@@ -113,3 +113,37 @@ p {
         font-size: 16px; /* Tamaño más pequeño para la descripción */
     }
 }
+
+/* Estilo del texto de derechos de autor */
+.copyright {
+    font-family: "Dancing Script", cursive; /* Fuente elegante */
+    font-size: 35px; /* Tamaño grande */
+    color: black; /* Texto negro */
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+    animation: fadeIn 2s ease-in-out; /* Efecto de entrada */
+}
+
+/* Resaltar el nombre con color y animación */
+.copyright span {
+    color: #ffd900dc; /* Color dorado */
+    font-size: 35px;
+    font-style: italic;
+    animation: glow 2s infinite alternate; /* Brillo intermitente */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación de brillo en el nombre */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #070707, 0 0 10px #070707; }
+    100% { text-shadow: 0 0 10px #070707, 0 0 20px #070707; }
+}
+
